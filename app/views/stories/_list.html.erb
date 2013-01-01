@@ -1,0 +1,19 @@
+<% hide = {} if !hide %>
+<table class='table'>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <% if !hide[:universe] %>
+            <th>Universe</th>
+        <% end %>
+    </tr>
+    <% @stories.each do |story| %>
+        <tr>
+            <td><%= link_to story.name, story_path(story.id) %></td>
+            <td><%= story.description %></td>
+            <% if !hide[:universe] %>
+                <td><%= story.universe.name %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
