@@ -12,5 +12,5 @@ Feature: Viewing universes
     Scenario: Link to individual universe
         Given a universe called "foobar"
         When I list all universes
-        When I click on "foobar"
+        And I click on "foobar"
         Then I should be on the universe's page

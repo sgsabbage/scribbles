@@ -6,9 +6,38 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class='container'>
+<body>
+  <div class='container-fluid'>
+    <div class="row-fluid">
+      <div class="span10 offset1">
 
-<%= yield %>
 
-</body>
-</html>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span1">
+        <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs">
+            <li class='active'><a href='#'>Foo</a></li>
+            <li><a href='#'>Bar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="span10">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+  </html>
