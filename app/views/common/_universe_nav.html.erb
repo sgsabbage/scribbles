@@ -5,7 +5,7 @@
     <% else %>
         <li>
     <% end %>
-        <a href='#'>All universes</a>
+        <%= link_to "All universes",root_path %>
     </li>
     <% Universe.all.each do |universe| %>
         <% if current_universe.to_i == universe.id %>

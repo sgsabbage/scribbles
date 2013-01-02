@@ -18,3 +18,10 @@ Feature: Viewing universes
         When I visit the homepage
         And I click on "foobar"
         Then I should be on the universe's page
+
+    Scenario: All universes sends you back home
+        Given a universe called "foobar"
+        When I visit the homepage
+        And I click on "foobar"
+        And I click on "All universes"
+        Then I should be on the homepage
