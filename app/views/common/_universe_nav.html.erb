@@ -1,0 +1,20 @@
+<div class="tabs-left pull-right">
+  <ul class="nav nav-tabs">
+    <% if current_universe == nil %>
+        <li class='active'>
+    <% else %>
+        <li>
+    <% end %>
+        <a href='#'>All universes</a>
+    </li>
+    <% Universe.all.each do |universe| %>
+        <% if current_universe.to_i == universe.id %>
+            <li class = 'active'>
+        <% else %>
+            <li>
+        <% end %>
+            <%= link_to universe.name,universe %>
+        </li>
+    <% end %>
+  </ul>
+</div>
