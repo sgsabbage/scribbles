@@ -21,7 +21,6 @@ Feature: Viewing universes
 
     Scenario: All universes sends you back home
         Given a universe called "foobar"
-        When I visit the homepage
-        And I click on "foobar"
+        When I visit the universe
         And I click on "All universes"
         Then I should be on the homepage
