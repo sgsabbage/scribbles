@@ -5,3 +5,7 @@ end
 When /^I list all universes$/ do
   visit universes_path
 end
+
+Then /^I should be on the universe's page$/ do
+  current_path.should == universe_path(@universe)
+end

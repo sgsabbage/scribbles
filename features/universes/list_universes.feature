@@ -1,8 +1,8 @@
 Feature: Viewing universes
 
-    So that I can see a list of universes
+    So that I can view a universe or list 
     As any user
-    I want to be able to view a table
+    I want to be able to view a universe (or more)
 
     Scenario: Show all universes
         Given a universe called "foobar"
@@ -13,4 +13,4 @@ Feature: Viewing universes
         Given a universe called "foobar"
         When I list all universes
         When I click on "foobar"
-        Then I should see "Name: foobar"
+        Then I should be on the universe's page
