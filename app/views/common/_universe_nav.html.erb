@@ -8,7 +8,7 @@
         <%= link_to "All universes",root_path %>
     </li>
     <% Universe.all.each do |universe| %>
-        <% if current_universe.to_i == universe.id %>
+        <% if current_universe == universe %>
             <li class = 'active'>
         <% else %>
             <li>

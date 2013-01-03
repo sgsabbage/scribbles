@@ -1,6 +1,9 @@
 Scribbles::Application.routes.draw do
   root to: "home#index"
-  resources :universes, only: [:show] 
+  resources :universes, only: [:show] do
+    get 'stories'
+    resources :stories, only: [:show]
+  end
 
   resources :stories
   # The priority is based upon order of creation:

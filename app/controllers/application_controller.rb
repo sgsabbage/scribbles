@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_universe
 
   def current_universe
-    params[:universe_id]
+    if(params[:universe_id] != nil)
+        Universe.find(params[:universe_id])
+    end
   end
 end
