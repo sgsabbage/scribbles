@@ -6,3 +6,7 @@ Given /^a story called "(.*?)" with description "(.*?)" in universe "(.*?)"$/ do
   universe = Universe.find_by_name(universe)
   universe.stories.create!(name:name,description:description)
 end
+
+When /^I visit the stories page$/ do
+  visit stories_path
+end

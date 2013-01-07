@@ -17,3 +17,7 @@ end
 Then /^I should be on the universe's page$/ do
   current_path.should == universe_path(@universe)
 end
+
+When /^I visit universe "(.*?)"'s stories page$/ do |universe|
+  visit universe_stories_path(Universe.find_by_name(universe))
+end
