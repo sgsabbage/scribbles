@@ -1,6 +1,6 @@
 Scribbles::Application.routes.draw do
   root to: "home#index"
-  resources :universes, only: [:show] do
+  resources :universes do
     get 'stories'
     resources :stories, only: [:show]
   end

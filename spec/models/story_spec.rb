@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Story" do
+describe Story do
 
     before(:each) do
-        @universe = mock_model("Universe")
+        @universe = mock_model(Universe)
     end
 
     it "is valid with valid attributes" do

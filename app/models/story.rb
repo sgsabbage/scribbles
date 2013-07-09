@@ -1,6 +1,4 @@
 class Story < ActiveRecord::Base
-  attr_accessible :description, :name
-
   validates :name, presence: true
   validates :description, presence: true
   validates :universe, presence: true

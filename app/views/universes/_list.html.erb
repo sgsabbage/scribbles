@@ -1,0 +1,11 @@
+<% hide = {} if !hide %>
+<table class='table'>
+    <tr>
+        <th>Name</th>
+    </tr>
+    <% @universes.each do |universe| %>
+        <tr>
+            <td><%= link_to universe.name, universe_path(universe.id) %></td>
+        </tr>
+    <% end %>
+</table>

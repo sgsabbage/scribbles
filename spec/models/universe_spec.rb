@@ -1,8 +1,9 @@
 require 'spec_helper'
 
-describe "Universe" do
+describe Universe do
     it "is valid with valid attributes" do
-        Universe.new(name: "foo",description: "blah").should be_valid
+        @universe = Universe.new(name: "foo", description: "blah")
+        @universe.should be_valid
     end
 
     it "is not valid without a name" do

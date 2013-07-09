@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class='container-fluid'>
+  <div class='container-fluid'>     
     <div class="row-fluid">
       <div class="span8 offset2">
 
@@ -15,11 +15,19 @@
         <div class="navbar">
           <div class="navbar-inner">
             <ul class="nav">
-              <% if current_universe == nil %>
-                <li><%= link_to "Stories",stories_path %></li>
-              <% else %>
-                <li><%= link_to "Stories",universe_stories_path(current_universe) %></li>
-              <% end %>
+              <%= link_to "Scribbles", root_path, class: "brand" %>
+              <li>
+                <%= link_to t(:universes), universes_path %>
+              </li>
+              <li>
+                <%= link_to t(:stories), stories_path %>
+              </li>
+              <li>
+                <%= link_to t(:drabbles), @drabbles %>
+              </li>
+              <li>
+                <%= link_to t(:characters), @characters %>
+              </li>
             </ul>
           </div>
         </div>
@@ -31,7 +39,6 @@
     <div class="row-fluid">
 
       <div class="span2">
-        <%= render 'common/universe_nav' %>
       </div>
 
       <div class="span8">

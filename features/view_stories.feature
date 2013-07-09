@@ -10,10 +10,3 @@ Feature: Viewing Stories
         When I visit the stories page
         And I click on "foo"
         Then I should see "bar"
-
-    Scenario: Link from universe page
-        Given a universe called "baz"
-        And a story called "foo" with description "bar" in universe "baz"
-        When I visit universe "baz"'s stories page
-        And I click on "foo"
-        Then I should see "bar"
